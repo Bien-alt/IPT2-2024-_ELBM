@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { FaHome, FaUserGraduate, FaEnvelope, FaSignOutAlt, FaBars, FaInfoCircle } from "react-icons/fa"; // Updated icon for About Us
+import { FaHome, FaUserGraduate, FaEnvelope, FaSignOutAlt, FaBars, FaUser, FaCalendarAlt } from "react-icons/fa"; // Added icons for new buttons
 import "../../../sass/components/_home.scss"; // Import the SCSS file for Home styles
 
-// Logo URL imported from _urls.scss
-const logoUrl = 'https://cdn.discordapp.com/attachments/725332328494399539/1290644340326010910/logo_1.png?ex=66fd35b5&is=66fbe435&hm=58a50ad98cb5874b4688b24469ff66749587c4e5fbb6fc492367c72f92c519e4&';
+// Import local logo from resources/images
+import logo from "../../../images/logo_1.png"; // Adjust the path as needed
 
 const LoadingScreen = () => (
   <div className="loading-screen">
-    <img src={logoUrl} alt="Logo" className="loading-logo" />
+    <img src={logo} alt="Logo" className="loading-logo" />
     <div className="loader">
       <div className="dot"></div>
       <div className="dot"></div>
@@ -59,7 +59,7 @@ export default function Home() {
       {loading && <LoadingScreen />} {/* Show loading screen if loading is true */}
       {isSidebarOpen && (
         <div className="sidebar">
-          <img src={logoUrl} alt="Logo" className="logo" />
+          <img src={logo} alt="Logo" className="logo" />
           <nav className="navbar nav-wrapper">
             <ul className="sidebar-menu navbar-nav">
               <li className="nav-item">
@@ -73,33 +73,36 @@ export default function Home() {
               </li>
               <li className="nav-item">
                 <a
-                  onClick={() => goToPage("/enrollment")}
-                  className={`nav-link ${activePage === "/enrollment" ? "active" : ""}`}
+                  onClick={() => goToPage("/registration")}
+                  className={`nav-link ${activePage === "/registration" ? "active" : ""}`}
                 >
                   <FaUserGraduate />
-                  <span className="nav-text">ENROLLMENT</span>
+                  <span className="nav-text">REGISTRATION</span>
                 </a>
               </li>
               <li className="nav-item">
                 <a
-                  onClick={() => goToPage("/contact-us")}
-                  className={`nav-link ${activePage === "/contact-us" ? "active" : ""}`}
+                  onClick={() => goToPage("/profile")}
+                  className={`nav-link ${activePage === "/profile" ? "active" : ""}`}
                 >
-                  <FaEnvelope />
-                  <span className="nav-text">CONTACT US</span>
+                  <FaUser />
+                  <span className="nav-text">PROFILE</span>
                 </a>
               </li>
               <li className="nav-item">
                 <a
-                  onClick={() => goToPage("/about-us")}
-                  className={`nav-link ${activePage === "/about-us" ? "active" : ""}`}
+                  onClick={() => goToPage("/schedule")}
+                  className={`nav-link ${activePage === "/schedule" ? "active" : ""}`}
                 >
-                  <FaInfoCircle />
-                  <span className="nav-text">ABOUT US</span>
+                  <FaCalendarAlt />
+                  <span className="nav-text">SCHEDULE</span>
                 </a>
               </li>
               <li className="nav-item">
-                <a onClick={handleLogout} className="nav-link">
+                <a
+                  onClick={handleLogout}
+                  className={`nav-link ${activePage === "/" ? "active" : ""}`}
+                >
                   <FaSignOutAlt />
                   <span className="nav-text">LOGOUT</span>
                 </a>
@@ -109,14 +112,14 @@ export default function Home() {
         </div>
       )}
       <div className="main-content">
-        <nav className="top-navbar">
+        <div className="top-navbar">
           <button className="toggle-button" onClick={toggleSidebar}>
             <FaBars />
           </button>
-          <h2>Welcome to Saturnino College Admin</h2>
-        </nav>
+          <h2>Welcome to the Admin Dashboard</h2>
+        </div>
         <div className="home-content">
-          {/* Additional content can go here */}
+          {/* Main content goes here */}
         </div>
       </div>
     </div>
