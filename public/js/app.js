@@ -8695,7 +8695,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _AboutUs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AboutUs */ "./resources/js/components/AboutUs.js");
 /* harmony import */ var _ContactUs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ContactUs */ "./resources/js/components/ContactUs.js");
 /* harmony import */ var _LoginPage_Login__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./LoginPage/Login */ "./resources/js/components/LoginPage/Login.js");
-/* harmony import */ var _StudentDashBoard_dashboard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./StudentDashBoard/dashboard */ "./resources/js/components/StudentDashBoard/dashboard");
+/* harmony import */ var _StudentDashBoard_dashboard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./StudentDashBoard/dashboard */ "./resources/js/components/StudentDashBoard/dashboard.js");
 /* harmony import */ var _StudentDashBoard_dashboard__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_StudentDashBoard_dashboard__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
@@ -8732,6 +8732,16 @@ function Routers() {
 if (document.getElementById("root")) {
   react_dom__WEBPACK_IMPORTED_MODULE_1__.render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(Routers, {}), document.getElementById("root"));
 }
+
+/***/ }),
+
+/***/ "./resources/js/components/StudentDashBoard/dashboard.js":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/StudentDashBoard/dashboard.js ***!
+  \***************************************************************/
+/***/ (() => {
+
+
 
 /***/ }),
 
@@ -67329,16 +67339,6 @@ module.exports = function (list, options) {
     lastIdentifiers = newLastIdentifiers;
   };
 };
-
-/***/ }),
-
-/***/ "./resources/js/components/StudentDashBoard/dashboard":
-/*!************************************************************!*\
-  !*** ./resources/js/components/StudentDashBoard/dashboard ***!
-  \************************************************************/
-/***/ (() => {
-
-
 
 /***/ }),
 
