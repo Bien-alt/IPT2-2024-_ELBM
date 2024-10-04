@@ -107,6 +107,51 @@ $sidebar-width: 200px; // Adjusted width of the sidebar
     font-size: 24px;
     color: $primary-color; // Title color
   }
+
+  .charts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .pie-charts {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      max-width: 800px;
+
+      .pie-chart-container {
+        text-align: center;
+
+        h4 {
+          font-size: 16px;
+          color: $primary-color;
+          margin-bottom: 10px;
+        }
+
+        .pie-chart {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          background: conic-gradient(
+            #00bcd4 0% 39.8%,        // First slice (1st Year)
+            #4fc3f7 39.8% 64.2%,     // Second slice (2nd Year)
+            #0288d1 64.2% 85.2%,     // Third slice (3rd Year)
+            #01579b 85.2% 100%       // Fourth slice (4th Year)
+          );
+        }
+
+        &.course-chart {
+          background: conic-gradient(
+            #00bcd4 0% 48%,          // First slice (BSIT)
+            #4fc3f7 48% 80%,         // Second slice (BSCS)
+            #0288d1 80% 88%,         // Third slice (BSEMC-GD)
+            #01579b 88% 97.7%,       // Fourth slice (BSEMC-DA)
+            #03a9f4 97.7% 100%       // Fifth slice (BLIS)
+          );
+        }
+      }
+    }
+  }
 }
 
 .loading-screen {
@@ -158,6 +203,64 @@ $sidebar-width: 200px; // Adjusted width of the sidebar
     transform: scale(1.5);
   }
 }
+
+.recent-activity {
+  margin-top: 40px; // Space between charts and table
+  width: 100%; // Full width for the table
+  max-width: 1200px; // Increased max width for larger appearance
+  background-color: #ffffff; // White background for the table
+  border-radius: 8px; // Rounded corners for the table
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); // Shadow for depth
+  overflow: hidden; // Ensure rounded corners apply to children
+
+  h3 {
+    font-size: 24px; // Title font size
+    color: $primary-color; // Title color for Recent Activity
+    margin: 20px 0; // Space around the title
+    text-align: center; // Center-align title
+  }
+
+  table {
+    width: 100%; // Full width for the table
+    border-collapse: collapse; // Merge table borders
+
+    th {
+      padding: 15px; // Padding for header cells
+      background-color: $primary-color; // Header background color
+      color: white; // Text color for headers
+      font-weight: bold; // Bold text for headers
+      text-align: left; // Align text to the left
+    }
+
+    td {
+      padding: 15px; // Padding for data cells
+      border: 1px solid #ddd; // Light border for cells
+      text-align: left; // Align text to the left
+
+      &:nth-child(even) {
+        background-color: #f9f9f9; // Zebra striping for even rows
+      }
+
+      &:hover {
+        background-color: #f1f1f1; // Highlight row on hover
+      }
+    }
+
+    tr {
+      transition: background-color 0.3s; // Smooth background transition
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2; // Light grey background for even rows
+    }
+    
+    tr:hover {
+      background-color: #e0e0e0; // Highlight row on hover
+    }
+  }
+}
+
+
 
 // Media queries for responsiveness
 @media (max-width: 768px) {
