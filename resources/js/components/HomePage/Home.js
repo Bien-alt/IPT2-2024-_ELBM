@@ -1,54 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { FaHome, FaUserGraduate, FaUser, FaCalendarAlt, FaSignOutAlt, FaBars } from "react-icons/fa";
+import Sidebar from "./Sidebar"; // Adjust the path if needed
+import TopNavbar from "../../../js/components/TopNavbar"; // Adjust the path if needed
+import LoadingScreen from "../../../js/components/LoadingScreen"; // Adjust the path if needed
 import "../../../sass/components/HomePage/_home.scss";
-import logo from "../../../images/logo_1.png";
 
 // Sample data for Recent Activity
 const recentActivities = [
   { name: "John Doe", id: "12345", role: "Student", time: "10:30 AM" },
   { name: "Jane Smith", id: "67890", role: "Admin", time: "11:00 AM" },
 ];
-
-const LoadingScreen = () => (
-  <div className="loading-screen">
-    <img src={logo} alt="Logo" className="loading-logo" />
-    <div className="loader">
-      <div className="dot"></div>
-      <div className="dot"></div>
-      <div className="dot"></div>
-    </div>
-  </div>
-);
-
-const Sidebar = ({ activePage, goToPage, handleLogout }) => (
-  <div className="sidebar">
-    <img src={logo} alt="Logo" className="logo" />
-    <nav className="navbar nav-wrapper">
-      <ul className="sidebar-menu navbar-nav">
-        {[
-          { path: "/home", label: "HOME", icon: <FaHome /> },
-          { path: "/registration", label: "REGISTRATION", icon: <FaUserGraduate /> },
-          { path: "/profile", label: "PROFILE", icon: <FaUser /> },
-          { path: "/schedule", label: "SCHEDULE", icon: <FaCalendarAlt /> },
-        ].map(({ path, label, icon }) => (
-          <li className="nav-item" key={path}>
-            <a onClick={() => goToPage(path)} className={`nav-link ${activePage === path ? "active" : ""}`}>
-              {icon}
-              <span className="nav-text">{label}</span>
-            </a>
-          </li>
-        ))}
-        <li className="nav-item">
-          <a onClick={handleLogout} className={`nav-link ${activePage === "/" ? "active" : ""}`}>
-            <FaSignOutAlt />
-            <span className="nav-text">LOGOUT</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-);
 
 export default function Home() {
   const navigate = useNavigate();
@@ -86,12 +47,7 @@ export default function Home() {
       {loading && <LoadingScreen />}
       {isSidebarOpen && <Sidebar activePage={activePage} goToPage={goToPage} handleLogout={handleLogout} />}
       <div className="main-content">
-        <div className="top-navbar">
-          <button className="toggle-button" onClick={toggleSidebar}>
-            <FaBars />
-          </button>
-          <h2>Welcome to the Admin Dashboard</h2>
-        </div>
+        <TopNavbar toggleSidebar={toggleSidebar} />
         <div className="home-content">
           <div className="charts">
             <h3>Total Semester Students</h3>
