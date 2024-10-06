@@ -1,0 +1,207 @@
+$primary-color: #ff9f00;
+$sidebar-background-color: white;
+$sidebar-width: 200px;
+
+.register-container {
+  display: flex;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.sidebar {
+  width: $sidebar-width;
+  background-color: $sidebar-background-color;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .logo {
+    margin-bottom: 20px;
+    img {
+      width: 80px;
+    }
+  }
+
+  .navbar {
+    .sidebar-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        margin-bottom: 15px;
+        .nav-link {
+          text-decoration: none;
+          color: $primary-color;
+          padding: 10px;
+          &:hover {
+            background-color: lighten($primary-color, 30%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  overflow-y: auto;
+
+  .top-navbar {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .toggle-button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .form-container {
+    padding: 20px;
+
+    h3 {
+      color: $primary-color;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .registration-form {
+      fieldset {
+        border: 1px solid $primary-color;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+
+        legend {
+          padding: 0 10px;
+          color: $primary-color;
+          font-weight: bold;
+          font-size: 18px;
+        }
+
+        .form-row {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start; /* Ensure labels and inputs stay aligned */
+          margin-bottom: 15px;
+
+          label {
+            flex: 0 0 200px; /* Fixed width for all labels */
+            text-align: left;
+            font-weight: bold;
+            margin-right: 20px; /* Space between label and input */
+          }
+
+          input,
+          select {
+            flex: 1; /* Inputs take the remaining space */
+            padding: 8px;
+            border: 1px solid $primary-color;
+            border-radius: 4px;
+            font-size: 14px;
+            max-width: 100%; /* Ensure the inputs don't exceed the container */
+          }
+        }
+      }
+
+      // Add the Roles container
+      .roles-container {
+        margin-top: 20px;
+
+        fieldset {
+          border: 1px solid $primary-color;
+          padding: 15px;
+          border-radius: 8px;
+          background-color: #f9f9f9;
+
+          legend {
+            padding: 0 10px;
+            color: $primary-color;
+            font-weight: bold;
+            font-size: 18px;
+          }
+
+          .form-row {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 15px;
+
+            label {
+              flex: 0 0 200px;
+              text-align: left;
+              font-weight: bold;
+              margin-right: 20px;
+            }
+
+            .role-options {
+              display: flex;
+              flex-wrap: wrap;
+
+              label {
+                margin-right: 10px;
+                input {
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+html,
+body {
+  height: 100%;
+  overflow: auto;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+  }
+
+  .main-content {
+    .top-navbar {
+      flex-direction: column;
+    }
+
+    .form-container {
+      padding: 10px;
+
+      .registration-form {
+        fieldset {
+          .form-row {
+            display: block; /* Stack form rows on smaller screens */
+            label {
+              display: block; /* Ensure label stays above input on smaller screens */
+              margin-bottom: 5px; /* Space between label and input */
+            }
+            input,
+            select {
+              width: 100%; /* Make inputs fill the available width */
+            }
+          }
+        }
+      }
+    }
+  }
+}

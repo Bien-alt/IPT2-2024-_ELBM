@@ -14,7 +14,7 @@
         <div class="container">
             <h1>Hello world!</h>
         </div>  
-    <div>
+    </div>
     <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>
