@@ -6,7 +6,6 @@ import Home from "./HomePage/Home"; // Corrected import path for Home component
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import Login from "./LoginPage/Login"; // Corrected import path for Login component
-import Dashboard from "./StudentDashBoard/dashboard"; // Import the Dashboard component
 
 export default function Routers() {
   return (
@@ -16,7 +15,6 @@ export default function Routers() {
         <Route path="home" element={<Home />} /> {/* Home page after login */}
         <Route path="about-us" element={<AboutUs />} />
         <Route path="contact-us" element={<ContactUs />} />
-        <Route path="student-dashboard" element={<Dashboard />} /> {/* Add this line for the new dashboard route */}
       </Routes>
     </Router>
   );
