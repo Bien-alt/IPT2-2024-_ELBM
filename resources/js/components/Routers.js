@@ -2,10 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from "./HomePage/Home"; // Corrected import path for Home component
-import AboutUs from "./AboutUs";
-import ContactUs from "./ContactUs";
-import Login from "./LoginPage/Login"; // Corrected import path for Login component
+import Home from "./HomePage/Home"; // Home component
+import Registration from "./RegistrationPage/Registration"; // Registration component
+import Profile from "./ProfilePage/Profile"; // Profile component
+import Schedule from "./SchedulePage/Schedule"; // Schedule component
+import Login from "./LoginPage/Login"; // Login component
 
 export default function Routers() {
   return (
@@ -13,8 +14,9 @@ export default function Routers() {
       <Routes>
         <Route path="/" element={<Login />} /> {/* Login is the default route */}
         <Route path="home" element={<Home />} /> {/* Home page after login */}
-        <Route path="about-us" element={<AboutUs />} />
-        <Route path="contact-us" element={<ContactUs />} />
+        <Route path="registration" element={<Registration />} /> {/* Registration page */}
+        <Route path="profile" element={<Profile />} /> {/* Profile page */}
+        <Route path="schedule" element={<Schedule />} /> {/* Schedule page */}
       </Routes>
     </Router>
   );
