@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../sass/components/_register.scss"; // Adjust path as needed
+import "../../../sass/components/_register.scss"; // Adjust path as needed
 import Sidebar from "../Sidebar"; // Assuming the Sidebar component path
 import TopNavbar from "../TopNavBar"; // Assuming the TopNavbar component path
 import LoadingScreen from "../LoadingScreen"; // Assuming the LoadingScreen component path
@@ -22,10 +22,10 @@ const RegistrationPage = () => {
     emergencyLastName: "",
     emergencyRelationship: "",
     emergencyContactNumber: "",
-    role: ""  // Added role here
+    role: "", // Added role here
   });
 
-  const [isLoading, setIsLoading] = useState(false); // State for loading screen
+  const [loading, setLoading] = useState(false); // State for loading screen
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const navigate = useNavigate();
 
@@ -39,12 +39,12 @@ const RegistrationPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsLoading(true); // Show loading screen when form is submitted
+    setLoading(true); // Show loading screen when form is submitted
 
     // Simulate form submission delay
     setTimeout(() => {
       console.log(formData); // Replace with actual form submission logic
-      setIsLoading(false); // Hide loading screen after submission
+      setLoading(false); // Hide loading screen after submission
     }, 2000);
   };
 
@@ -54,9 +54,26 @@ const RegistrationPage = () => {
 
   return (
     <div className="registration-container">
-      {isLoading && <LoadingScreen />} {/* Conditionally render loading screen */}
-
-      <Sidebar isOpen={isSidebarOpen} />
+      {loading && <LoadingScreen />} {/* Conditionally render loading screen */}
+      {isSidebarOpen && (
+        <Sidebar
+          activePage="/registration" // Assuming this is the current active page
+          goToPage={(path) => {
+            setLoading(true);
+            setTimeout(() => {
+              navigate(path);
+              setLoading(false);
+            }, 1000);
+          }}
+          handleLogout={() => {
+            setLoading(true);
+            setTimeout(() => {
+              navigate("/");
+              setLoading(false);
+            }, 1000);
+          }}
+        />
+      )}
       <div className="main-content">
         <TopNavbar toggleSidebar={toggleSidebar} />
         <div className="form-container">
@@ -275,8 +292,6 @@ const RegistrationPage = () => {
                   value={formData.emergencyRelationship} 
                   onChange={handleChange}
                 />
-              </div>
-              <div className="form-row">
                 <label htmlFor="emergencyContactNumber">Contact Number</label>
                 <input 
                   type="text" 
@@ -289,7 +304,7 @@ const RegistrationPage = () => {
               </div>
             </fieldset>
 
-            <button type="submit" className="submit-btn">Submit</button>
+            <button type="submit" className="submit-button">Register</button>
           </form>
         </div>
       </div>

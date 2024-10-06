@@ -1,0 +1,160 @@
+@import '../components/HomePage/_variables.scss'; // Adjust the path if needed
+@import '../components/HomePage/_mixins.scss'; // Adjust the path if needed
+@import '../components/HomePage/_topNavbar.scss'; // Adjust the path if needed
+@import '../components/HomePage/_sidebar.scss'; // Adjust the path if needed
+
+.registration-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  background-color: $background-color; // Make sure this variable is defined in _variables.scss
+  padding: 20px;
+
+  .form-container {
+    background-color: $white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  h3 {
+    font-size: 24px;
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  fieldset {
+    border: none;
+    margin-bottom: 20px;
+
+    legend {
+      font-size: 20px;
+      font-weight: bold;
+      color: $primary-color;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid $primary-color;
+    }
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+
+      label {
+        font-weight: bold;
+        color: $text-color;
+        margin-bottom: 5px;
+      }
+
+      input,
+      select {
+        padding: 10px;
+        border: 1px solid $input-border-color;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: $white;
+        color: $text-color;
+
+        &:focus {
+          outline: none;
+          border-color: $primary-color;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+
+    .form-row:last-child {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+
+      .full-name-input {
+        flex: 1;
+      }
+    }
+
+    .degree-program-row,
+    .birth-date-row {
+      .form-row {
+        display: flex;
+        gap: 20px;
+      }
+
+      select,
+      input {
+        flex: 1;
+      }
+    }
+  }
+
+  .role-options {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+
+    label {
+      display: flex;
+      align-items: center;
+
+      input[type="radio"] {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  // Submit Button
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+// Media Queries for Responsive Design
+@media (max-width: 768px) {
+  .registration-container {
+    flex-direction: column;
+
+    .sidebar {
+      width: 100%;
+      height: auto;
+    }
+
+    .main-content {
+      padding: 10px;
+    }
+
+    .form-container {
+      padding: 15px;
+    }
+
+    .form-row {
+      flex-direction: column;
+    }
+  }
+}

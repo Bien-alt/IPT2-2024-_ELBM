@@ -8616,7 +8616,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../sass/components/_register.scss'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _sass_components_register_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../sass/components/_register.scss */ "./resources/sass/components/_register.scss");
 /* harmony import */ var _Sidebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Sidebar */ "./resources/js/components/Sidebar.js");
 /* harmony import */ var _TopNavBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../TopNavBar */ "./resources/js/components/TopNavBar.js");
 /* harmony import */ var _LoadingScreen__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../LoadingScreen */ "./resources/js/components/LoadingScreen.js");
@@ -8665,8 +8665,8 @@ var RegistrationPage = function RegistrationPage() {
     setFormData = _useState2[1];
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
     _useState4 = _slicedToArray(_useState3, 2),
-    isLoading = _useState4[0],
-    setIsLoading = _useState4[1]; // State for loading screen
+    loading = _useState4[0],
+    setLoading = _useState4[1]; // State for loading screen
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true),
     _useState6 = _slicedToArray(_useState5, 2),
     isSidebarOpen = _useState6[0],
@@ -8680,12 +8680,12 @@ var RegistrationPage = function RegistrationPage() {
   };
   var handleSubmit = function handleSubmit(e) {
     e.preventDefault();
-    setIsLoading(true); // Show loading screen when form is submitted
+    setLoading(true); // Show loading screen when form is submitted
 
     // Simulate form submission delay
     setTimeout(function () {
       console.log(formData); // Replace with actual form submission logic
-      setIsLoading(false); // Hide loading screen after submission
+      setLoading(false); // Hide loading screen after submission
     }, 2000);
   };
   var toggleSidebar = function toggleSidebar() {
@@ -8693,8 +8693,23 @@ var RegistrationPage = function RegistrationPage() {
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
     className: "registration-container",
-    children: [isLoading && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_LoadingScreen__WEBPACK_IMPORTED_MODULE_4__["default"], {}), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Sidebar__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      isOpen: isSidebarOpen
+    children: [loading && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_LoadingScreen__WEBPACK_IMPORTED_MODULE_4__["default"], {}), " ", isSidebarOpen && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Sidebar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      activePage: "/registration" // Assuming this is the current active page
+      ,
+      goToPage: function goToPage(path) {
+        setLoading(true);
+        setTimeout(function () {
+          navigate(path);
+          setLoading(false);
+        }, 1000);
+      },
+      handleLogout: function handleLogout() {
+        setLoading(true);
+        setTimeout(function () {
+          navigate("/");
+          setLoading(false);
+        }, 1000);
+      }
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
       className: "main-content",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_TopNavBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -8957,10 +8972,7 @@ var RegistrationPage = function RegistrationPage() {
                 placeholder: "Relationship",
                 value: formData.emergencyRelationship,
                 onChange: handleChange
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-              className: "form-row",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
                 htmlFor: "emergencyContactNumber",
                 children: "Contact Number"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
@@ -8974,8 +8986,8 @@ var RegistrationPage = function RegistrationPage() {
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
             type: "submit",
-            className: "submit-btn",
-            children: "Submit"
+            className: "submit-button",
+            children: "Register"
           })]
         })]
       })]
@@ -15898,6 +15910,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".top-navbar {\n  display: flex;\n  align-items: center;\n  background-color: #ff9f00;\n  padding: 10px 20px;\n  margin: 0;\n  width: 100%;\n  position: relative;\n  box-shadow: none;\n}\n.top-navbar * {\n  margin: 0;\n  padding: 0;\n}\n.top-navbar h2 {\n  margin: 0;\n  padding: 0;\n}\n.top-navbar .toggle-button {\n  background: none;\n  border: none;\n  color: white;\n  font-size: 24px;\n  cursor: pointer;\n  margin-right: 0;\n  transition: color 0.3s ease;\n}\n.top-navbar .toggle-button:hover {\n  color: rgb(255, 187.8, 76.5);\n}\n\n.sidebar {\n  width: 200px;\n  background-color: white;\n  padding: 20px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.sidebar .logo {\n  margin-bottom: 20px;\n}\n.sidebar .logo img {\n  width: 80px;\n  height: auto;\n}\n.sidebar .navbar .sidebar-menu {\n  list-style-type: none;\n  padding: 0;\n  margin: 0;\n  flex-grow: 1;\n  display: flex;\n  flex-direction: column;\n}\n.sidebar .navbar .sidebar-menu .nav-item {\n  width: 100%;\n}\n.sidebar .navbar .sidebar-menu .nav-item .nav-link {\n  display: flex;\n  align-items: center;\n  padding: 15px;\n  color: #ff9f00;\n  text-decoration: none;\n  font-size: 14px;\n  transition: background-color 0.3s ease;\n  cursor: pointer;\n}\n.sidebar .navbar .sidebar-menu .nav-item .nav-link:hover {\n  background-color: rgb(255, 216.6, 153);\n}\n.sidebar .navbar .sidebar-menu .nav-item .nav-link.active {\n  background-color: rgb(178.5, 111.3, 0);\n  color: white;\n}\n.sidebar .navbar .sidebar-menu .nav-item .nav-link i {\n  margin-right: 10px;\n  font-size: 18px;\n}\n.sidebar .navbar .sidebar-menu .nav-item .nav-link .nav-text {\n  flex-grow: 1;\n}\n\n.profile-container {\n  display: flex;\n  flex-direction: column;\n  padding: 20px;\n}\n\n.profile-content {\n  padding: 20px;\n  flex-grow: 1;\n}\n\n.profile-table {\n  width: 100%;\n  border-collapse: collapse;\n}\n.profile-table th,\n.profile-table td {\n  padding: 10px;\n  text-align: left;\n  border: 1px solid #ddd;\n}\n.profile-table th {\n  background-color: #ff9f00;\n  color: white;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/components/_register.scss":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/components/_register.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".top-navbar {\n  display: flex;\n  align-items: center;\n  background-color: #ff9f00;\n  padding: 10px 20px;\n  margin: 0;\n  width: 100%;\n  position: relative;\n  box-shadow: none;\n}\n.top-navbar * {\n  margin: 0;\n  padding: 0;\n}\n.top-navbar h2 {\n  margin: 0;\n  padding: 0;\n}\n.top-navbar .toggle-button {\n  background: none;\n  border: none;\n  color: white;\n  font-size: 24px;\n  cursor: pointer;\n  margin-right: 0;\n  transition: color 0.3s ease;\n}\n.top-navbar .toggle-button:hover {\n  color: rgb(255, 187.8, 76.5);\n}\n\n.sidebar {\n  width: 200px;\n  background-color: white;\n  padding: 20px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.sidebar .logo {\n  margin-bottom: 20px;\n}\n.sidebar .logo img {\n  width: 80px;\n  height: auto;\n}\n.sidebar .navbar .sidebar-menu {\n  list-style-type: none;\n  padding: 0;\n  margin: 0;\n  flex-grow: 1;\n  display: flex;\n  flex-direction: column;\n}\n.sidebar .navbar .sidebar-menu .nav-item {\n  width: 100%;\n}\n.sidebar .navbar .sidebar-menu .nav-item .nav-link {\n  display: flex;\n  align-items: center;\n  padding: 15px;\n  color: #ff9f00;\n  text-decoration: none;\n  font-size: 14px;\n  transition: background-color 0.3s ease;\n  cursor: pointer;\n}\n.sidebar .navbar .sidebar-menu .nav-item .nav-link:hover {\n  background-color: rgb(255, 216.6, 153);\n}\n.sidebar .navbar .sidebar-menu .nav-item .nav-link.active {\n  background-color: rgb(178.5, 111.3, 0);\n  color: white;\n}\n.sidebar .navbar .sidebar-menu .nav-item .nav-link i {\n  margin-right: 10px;\n  font-size: 18px;\n}\n.sidebar .navbar .sidebar-menu .nav-item .nav-link .nav-text {\n  flex-grow: 1;\n}\n\n.registration-container {\n  display: flex;\n  flex-direction: row;\n  min-height: 100vh;\n}\n\n.main-content {\n  flex: 1;\n  background-color: #f5f5f5;\n  padding: 20px;\n}\n.main-content .form-container {\n  background-color: #ffffff;\n  border-radius: 8px;\n  padding: 30px;\n  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);\n  max-width: 900px;\n  margin: 0 auto;\n}\n.main-content h3 {\n  font-size: 24px;\n  color: #ff9f00;\n  text-align: center;\n  margin-bottom: 20px;\n}\n.main-content fieldset {\n  border: none;\n  margin-bottom: 20px;\n}\n.main-content fieldset legend {\n  font-size: 20px;\n  font-weight: bold;\n  color: #ff9f00;\n  padding-bottom: 10px;\n  margin-bottom: 10px;\n  border-bottom: 2px solid #ff9f00;\n}\n.main-content fieldset .form-row {\n  display: flex;\n  flex-direction: column;\n  margin-bottom: 15px;\n}\n.main-content fieldset .form-row label {\n  font-weight: bold;\n  color: #333333;\n  margin-bottom: 5px;\n}\n.main-content fieldset .form-row input,\n.main-content fieldset .form-row select {\n  padding: 10px;\n  border: 1px solid #cccccc;\n  border-radius: 4px;\n  font-size: 16px;\n  background-color: #ffffff;\n  color: #333333;\n}\n.main-content fieldset .form-row input:focus,\n.main-content fieldset .form-row select:focus {\n  outline: none;\n  border-color: #ff9f00;\n  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);\n}\n.main-content fieldset .form-row:last-child {\n  display: flex;\n  flex-direction: row;\n  gap: 20px;\n}\n.main-content fieldset .form-row:last-child .full-name-input {\n  flex: 1;\n}\n.main-content fieldset .degree-program-row .form-row,\n.main-content fieldset .birth-date-row .form-row {\n  display: flex;\n  gap: 20px;\n}\n.main-content fieldset .degree-program-row select,\n.main-content fieldset .degree-program-row input,\n.main-content fieldset .birth-date-row select,\n.main-content fieldset .birth-date-row input {\n  flex: 1;\n}\n.main-content .role-options {\n  display: flex;\n  justify-content: space-around;\n  padding: 10px 0;\n}\n.main-content .role-options label {\n  display: flex;\n  align-items: center;\n}\n.main-content .role-options label input[type=radio] {\n  margin-right: 10px;\n}\n.main-content .submit-btn {\n  display: block;\n  width: 100%;\n  padding: 12px;\n  background-color: #ff9f00;\n  color: #ffffff;\n  border: none;\n  border-radius: 4px;\n  font-size: 18px;\n  font-weight: bold;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n.main-content .submit-btn:hover {\n  background-color: rgb(204, 127.2, 0);\n}\n.main-content .submit-btn:focus {\n  outline: none;\n  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);\n}\n\n@media (max-width: 768px) {\n  .registration-container {\n    flex-direction: column;\n  }\n  .registration-container .sidebar {\n    width: 100%;\n    height: auto;\n  }\n  .registration-container .main-content {\n    padding: 10px;\n  }\n  .registration-container .form-container {\n    padding: 15px;\n  }\n  .registration-container .form-row {\n    flex-direction: column;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -67788,6 +67824,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_profile_scss__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./resources/sass/components/_register.scss":
+/*!**************************************************!*\
+  !*** ./resources/sass/components/_register.scss ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_register_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!../../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./_register.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/components/_register.scss");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_register_scss__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_register_scss__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
