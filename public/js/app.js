@@ -8608,9 +8608,381 @@ function Profile() {
 /*!******************************************************************!*\
   !*** ./resources/js/components/RegistrationPage/Registration.js ***!
   \******************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../sass/components/_register.scss'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _Sidebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Sidebar */ "./resources/js/components/Sidebar.js");
+/* harmony import */ var _TopNavBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../TopNavBar */ "./resources/js/components/TopNavBar.js");
+/* harmony import */ var _LoadingScreen__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../LoadingScreen */ "./resources/js/components/LoadingScreen.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+
+ // Adjust path as needed
+ // Assuming the Sidebar component path
+ // Assuming the TopNavbar component path
+ // Assuming the LoadingScreen component path
 
 
+var RegistrationPage = function RegistrationPage() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+      fullName: "",
+      studentNumber: "",
+      yearLevel: "",
+      email: "",
+      phoneNumber: "",
+      degreeProgram: "",
+      birthDate: "",
+      streetAddress: "",
+      city: "",
+      stateProvince: "",
+      postalCode: "",
+      emergencyFirstName: "",
+      emergencyLastName: "",
+      emergencyRelationship: "",
+      emergencyContactNumber: "",
+      role: "" // Added role here
+    }),
+    _useState2 = _slicedToArray(_useState, 2),
+    formData = _useState2[0],
+    setFormData = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState4 = _slicedToArray(_useState3, 2),
+    isLoading = _useState4[0],
+    setIsLoading = _useState4[1]; // State for loading screen
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true),
+    _useState6 = _slicedToArray(_useState5, 2),
+    isSidebarOpen = _useState6[0],
+    setIsSidebarOpen = _useState6[1];
+  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useNavigate)();
+  var handleChange = function handleChange(e) {
+    var _e$target = e.target,
+      name = _e$target.name,
+      value = _e$target.value;
+    setFormData(_objectSpread(_objectSpread({}, formData), {}, _defineProperty({}, name, value)));
+  };
+  var handleSubmit = function handleSubmit(e) {
+    e.preventDefault();
+    setIsLoading(true); // Show loading screen when form is submitted
+
+    // Simulate form submission delay
+    setTimeout(function () {
+      console.log(formData); // Replace with actual form submission logic
+      setIsLoading(false); // Hide loading screen after submission
+    }, 2000);
+  };
+  var toggleSidebar = function toggleSidebar() {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    className: "registration-container",
+    children: [isLoading && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_LoadingScreen__WEBPACK_IMPORTED_MODULE_4__["default"], {}), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Sidebar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      isOpen: isSidebarOpen
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+      className: "main-content",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_TopNavBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        toggleSidebar: toggleSidebar
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        className: "form-container",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
+          children: "STUDENT REGISTRATION FORM"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("form", {
+          className: "registration-form",
+          onSubmit: handleSubmit,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("fieldset", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("legend", {
+              children: "Basic Information"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+              className: "full-name-row",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+                className: "form-row",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+                  htmlFor: "fullName",
+                  children: "Full Name"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+                  type: "text",
+                  id: "fullName",
+                  name: "fullName",
+                  className: "full-name-input",
+                  placeholder: "Last Name, First Name, Middle Name",
+                  value: formData.fullName,
+                  onChange: handleChange
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+              className: "student-number-row",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+                className: "form-row",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+                  htmlFor: "studentNumber",
+                  children: "Student Number"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+                  type: "text",
+                  id: "studentNumber",
+                  name: "studentNumber",
+                  placeholder: "ID Number",
+                  value: formData.studentNumber,
+                  onChange: handleChange
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+                  htmlFor: "yearLevel",
+                  children: "Year Level"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("select", {
+                  id: "yearLevel",
+                  name: "yearLevel",
+                  value: formData.yearLevel,
+                  onChange: handleChange,
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("option", {
+                    children: "Please Select"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("option", {
+                    children: "1st Year"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("option", {
+                    children: "2nd Year"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("option", {
+                    children: "3rd Year"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("option", {
+                    children: "4th Year"
+                  })]
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+              className: "email-row",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+                className: "form-row",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+                  htmlFor: "email",
+                  children: "Email"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+                  type: "email",
+                  id: "email",
+                  name: "email",
+                  placeholder: "Email",
+                  value: formData.email,
+                  onChange: handleChange
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+                  htmlFor: "phoneNumber",
+                  children: "Phone Number"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+                  type: "text",
+                  id: "phoneNumber",
+                  name: "phoneNumber",
+                  placeholder: "Phone Number",
+                  value: formData.phoneNumber,
+                  onChange: handleChange
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+              className: "degree-program-row",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+                className: "form-row",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+                  htmlFor: "degreeProgram",
+                  children: "Degree Program"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("select", {
+                  id: "degreeProgram",
+                  name: "degreeProgram",
+                  value: formData.degreeProgram,
+                  onChange: handleChange,
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("option", {
+                    children: "Please Select"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("option", {
+                    children: "BLIS"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("option", {
+                    children: "BSCS"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("option", {
+                    children: "BSIT"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("option", {
+                    children: "BSEMC - Game Development"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("option", {
+                    children: "BSEMC - Digital Animation"
+                  })]
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+              className: "birth-date-row",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+                className: "form-row",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+                  htmlFor: "birthDate",
+                  children: "Birth Date"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+                  type: "date",
+                  id: "birthDate",
+                  name: "birthDate",
+                  value: formData.birthDate,
+                  onChange: handleChange
+                })]
+              })
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("fieldset", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("legend", {
+              children: "Roles"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+              className: "form-row",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+                children: "Select Role:"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+                className: "role-options",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("label", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+                    type: "radio",
+                    name: "role",
+                    value: "admin",
+                    onChange: handleChange
+                  }), "Admin"]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("label", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+                    type: "radio",
+                    name: "role",
+                    value: "teacher",
+                    onChange: handleChange
+                  }), "Teacher"]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("label", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+                    type: "radio",
+                    name: "role",
+                    value: "student",
+                    onChange: handleChange
+                  }), "Student"]
+                })]
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("fieldset", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("legend", {
+              children: "Present Address"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+              className: "form-row",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+                htmlFor: "streetAddress",
+                children: "Street Address"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+                type: "text",
+                id: "streetAddress",
+                name: "streetAddress",
+                placeholder: "Street Address",
+                value: formData.streetAddress,
+                onChange: handleChange
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+              className: "form-row",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+                htmlFor: "city",
+                children: "City"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+                type: "text",
+                id: "city",
+                name: "city",
+                placeholder: "City",
+                value: formData.city,
+                onChange: handleChange
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+                htmlFor: "stateProvince",
+                children: "State/Province"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+                type: "text",
+                id: "stateProvince",
+                name: "stateProvince",
+                placeholder: "State/Province",
+                value: formData.stateProvince,
+                onChange: handleChange
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+              className: "form-row",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+                htmlFor: "postalCode",
+                children: "Postal/Zip Code"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+                type: "text",
+                id: "postalCode",
+                name: "postalCode",
+                placeholder: "Postal/Zip Code",
+                value: formData.postalCode,
+                onChange: handleChange
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("fieldset", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("legend", {
+              children: "Emergency Contact Information"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+              className: "form-row",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+                htmlFor: "emergencyFirstName",
+                children: "First Name"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+                type: "text",
+                id: "emergencyFirstName",
+                name: "emergencyFirstName",
+                placeholder: "First Name",
+                value: formData.emergencyFirstName,
+                onChange: handleChange
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+              className: "form-row",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+                htmlFor: "emergencyLastName",
+                children: "Last Name"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+                type: "text",
+                id: "emergencyLastName",
+                name: "emergencyLastName",
+                placeholder: "Last Name",
+                value: formData.emergencyLastName,
+                onChange: handleChange
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+              className: "form-row",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+                htmlFor: "emergencyRelationship",
+                children: "Relationship"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+                type: "text",
+                id: "emergencyRelationship",
+                name: "emergencyRelationship",
+                placeholder: "Relationship",
+                value: formData.emergencyRelationship,
+                onChange: handleChange
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+              className: "form-row",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+                htmlFor: "emergencyContactNumber",
+                children: "Contact Number"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+                type: "text",
+                id: "emergencyContactNumber",
+                name: "emergencyContactNumber",
+                placeholder: "Contact Number",
+                value: formData.emergencyContactNumber,
+                onChange: handleChange
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
+            type: "submit",
+            className: "submit-btn",
+            children: "Submit"
+          })]
+        })]
+      })]
+    })]
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RegistrationPage);
 
 /***/ }),
 
@@ -8631,7 +9003,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
 /* harmony import */ var _HomePage_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./HomePage/Home */ "./resources/js/components/HomePage/Home.js");
 /* harmony import */ var _RegistrationPage_Registration__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./RegistrationPage/Registration */ "./resources/js/components/RegistrationPage/Registration.js");
-/* harmony import */ var _RegistrationPage_Registration__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_RegistrationPage_Registration__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _ProfilePage_Profile__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ProfilePage/Profile */ "./resources/js/components/ProfilePage/Profile.js");
 /* harmony import */ var _SchedulePage_Schedule__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./SchedulePage/Schedule */ "./resources/js/components/SchedulePage/Schedule.js");
 /* harmony import */ var _LoginPage_Login__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./LoginPage/Login */ "./resources/js/components/LoginPage/Login.js");
@@ -8656,7 +9027,7 @@ function Routers() {
         element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_HomePage_Home__WEBPACK_IMPORTED_MODULE_2__["default"], {})
       }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
         path: "registration",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)((_RegistrationPage_Registration__WEBPACK_IMPORTED_MODULE_3___default()), {})
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_RegistrationPage_Registration__WEBPACK_IMPORTED_MODULE_3__["default"], {})
       }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
         path: "profile",
         element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_ProfilePage_Profile__WEBPACK_IMPORTED_MODULE_4__["default"], {})
