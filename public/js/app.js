@@ -8536,9 +8536,78 @@ var LoginForm = function LoginForm() {
 /*!********************************************************!*\
   !*** ./resources/js/components/ProfilePage/Profile.js ***!
   \********************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ ProfilePage)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module './Navs'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../sass/components/_profile'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
+ // Assuming Navs.js manages navigation links/buttons
+
+
+function ProfilePage() {
+  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useNavigate)();
+  var handleLogout = function handleLogout() {
+    // Logic for logging out, such as clearing authentication data
+    navigate("/"); // Redirect to the Login page
+  };
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: "profile-page",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Object(function webpackMissingModule() { var e = new Error("Cannot find module './Navs'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {}), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "profile-container",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+        children: "Your Profile"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "profile-info",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "profile-pic",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            src: "https://via.placeholder.com/150",
+            alt: "Profile",
+            className: "profile-image"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "profile-details",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+              children: "Name:"
+            }), " John Doe"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+              children: "Email:"
+            }), " john.doe@example.com"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+              children: "Phone:"
+            }), " (123) 456-7890"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+              children: "Location:"
+            }), " New York, USA"]
+          })]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "profile-actions",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+          className: "edit-profile",
+          children: "Edit Profile"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+          className: "logout",
+          onClick: handleLogout,
+          children: "Logout"
+        })]
+      })]
+    })]
+  });
+}
 
 /***/ }),
 
@@ -8571,7 +8640,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _RegistrationPage_Registration__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./RegistrationPage/Registration */ "./resources/js/components/RegistrationPage/Registration.js");
 /* harmony import */ var _RegistrationPage_Registration__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_RegistrationPage_Registration__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _ProfilePage_Profile__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ProfilePage/Profile */ "./resources/js/components/ProfilePage/Profile.js");
-/* harmony import */ var _ProfilePage_Profile__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_ProfilePage_Profile__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _SchedulePage_Schedule__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./SchedulePage/Schedule */ "./resources/js/components/SchedulePage/Schedule.js");
 /* harmony import */ var _SchedulePage_Schedule__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_SchedulePage_Schedule__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _LoginPage_Login__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./LoginPage/Login */ "./resources/js/components/LoginPage/Login.js");
@@ -8599,7 +8667,7 @@ function Routers() {
         element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)((_RegistrationPage_Registration__WEBPACK_IMPORTED_MODULE_3___default()), {})
       }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
         path: "profile",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)((_ProfilePage_Profile__WEBPACK_IMPORTED_MODULE_4___default()), {})
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_ProfilePage_Profile__WEBPACK_IMPORTED_MODULE_4__["default"], {})
       }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
         path: "schedule",
         element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)((_SchedulePage_Schedule__WEBPACK_IMPORTED_MODULE_5___default()), {})
