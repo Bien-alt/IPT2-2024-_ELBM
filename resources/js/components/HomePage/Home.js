@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { FaHome, FaUserGraduate, FaUser, FaCalendarAlt, FaSignOutAlt, FaBars } from "react-icons/fa";
-import "../../../sass/components/_home.scss";
+import "../../../sass/components/HomePage/_home.scss";
 import logo from "../../../images/logo_1.png";
 
 // Sample data for Recent Activity

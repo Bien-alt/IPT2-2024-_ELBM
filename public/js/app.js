@@ -8160,7 +8160,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
 /* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.mjs");
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../sass/components/_home.scss'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _sass_components_HomePage_home_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../sass/components/HomePage/_home.scss */ "./resources/sass/components/HomePage/_home.scss");
 /* harmony import */ var _images_logo_1_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../images/logo_1.png */ "./resources/images/logo_1.png");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
@@ -15164,6 +15164,30 @@ function blitBuffer (src, dst, offset, length) {
 function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/components/HomePage/_home.scss":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/components/HomePage/_home.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".sidebar {\n  width: 200px;\n  background-color: white;\n  padding: 20px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.sidebar .logo {\n  margin-bottom: 20px;\n}\n.sidebar .logo img {\n  width: 80px;\n  height: auto;\n}\n.sidebar .navbar .sidebar-menu {\n  list-style-type: none;\n  padding: 0;\n  margin: 0;\n  flex-grow: 1;\n  display: flex;\n  flex-direction: column;\n}\n.sidebar .navbar .sidebar-menu .nav-item {\n  width: 100%;\n}\n.sidebar .navbar .sidebar-menu .nav-item .nav-link {\n  display: flex;\n  align-items: center;\n  padding: 15px;\n  color: #ff9f00;\n  text-decoration: none;\n  font-size: 14px;\n  transition: background-color 0.3s ease;\n  cursor: pointer;\n}\n.sidebar .navbar .sidebar-menu .nav-item .nav-link:hover {\n  background-color: rgb(255, 216.6, 153);\n}\n.sidebar .navbar .sidebar-menu .nav-item .nav-link.active {\n  background-color: rgb(178.5, 111.3, 0);\n  color: white;\n}\n.sidebar .navbar .sidebar-menu .nav-item .nav-link i {\n  margin-right: 10px;\n  font-size: 18px;\n}\n.sidebar .navbar .sidebar-menu .nav-item .nav-link .nav-text {\n  flex-grow: 1;\n}\n\n.top-navbar {\n  display: flex;\n  align-items: center;\n  background-color: #ff9f00;\n  padding: 10px 20px;\n  color: white;\n}\n.top-navbar .toggle-button {\n  background: none;\n  border: none;\n  color: white;\n  font-size: 24px;\n  cursor: pointer;\n  margin-right: 20px;\n  transition: color 0.3s ease;\n}\n.top-navbar .toggle-button:hover {\n  color: rgb(255, 187.8, 76.5);\n}\n\n.pie-chart-container {\n  text-align: center;\n}\n.pie-chart-container h4 {\n  font-size: 16px;\n  color: #ff9f00;\n  margin-bottom: 10px;\n}\n.pie-chart-container .pie-chart {\n  width: 150px;\n  height: 150px;\n  border-radius: 50%;\n  background: conic-gradient(#00bcd4 0% 39.8%, #4fc3f7 39.8% 64.2%, #0288d1 64.2% 85.2%, #01579b 85.2% 100%);\n}\n.pie-chart-container.course-chart {\n  background: conic-gradient(#00bcd4 0% 48%, #4fc3f7 48% 80%, #0288d1 80% 88%, #01579b 88% 97.7%, #03a9f4 97.7% 100%);\n}\n\n.loading-screen {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: rgba(255, 255, 255, 0.8);\n  z-index: 999;\n}\n.loading-screen .loading-logo {\n  width: 150px;\n  margin-bottom: 20px;\n}\n.loading-screen .loader {\n  display: flex;\n  justify-content: center;\n}\n.loading-screen .loader .dot {\n  width: 10px;\n  height: 10px;\n  margin: 0 5px;\n  border-radius: 50%;\n  background-color: #ff9f00;\n  animation: loading 0.6s infinite alternate;\n}\n.loading-screen .loader .dot:nth-child(2) {\n  animation-delay: 0.2s;\n}\n.loading-screen .loader .dot:nth-child(3) {\n  animation-delay: 0.4s;\n}\n\n@keyframes loading {\n  from {\n    transform: scale(1);\n  }\n  to {\n    transform: scale(1.5);\n  }\n}\n.recent-activity {\n  margin-top: 40px;\n  width: 100%;\n  max-width: 1200px;\n  background-color: #ffffff;\n  border-radius: 8px;\n  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);\n  overflow: hidden;\n}\n.recent-activity h3 {\n  font-size: 24px;\n  color: #ff9f00;\n  margin: 20px 0;\n  text-align: center;\n}\n.recent-activity table {\n  width: 100%;\n  border-collapse: collapse;\n}\n.recent-activity table th {\n  padding: 15px;\n  background-color: #ff9f00;\n  color: white;\n  font-weight: bold;\n  text-align: left;\n}\n.recent-activity table td {\n  padding: 15px;\n  border: 1px solid #ddd;\n  text-align: left;\n}\n.recent-activity table td:nth-child(even) {\n  background-color: #f9f9f9;\n}\n.recent-activity table td:hover {\n  background-color: #f1f1f1;\n}\n.recent-activity table tr {\n  transition: background-color 0.3s;\n}\n.recent-activity table tr:nth-child(even) {\n  background-color: #f2f2f2;\n}\n.recent-activity table tr:hover {\n  background-color: #e0e0e0;\n}\n\n.home-container {\n  display: flex;\n  height: 100vh;\n}\n\n.main-content {\n  flex-grow: 1;\n  display: flex;\n  flex-direction: column;\n  padding: 20px;\n}\n.main-content h2 {\n  font-size: 24px;\n  color: #ff9f00;\n}\n.main-content .charts {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.main-content .charts .pie-charts {\n  display: flex;\n  justify-content: space-around;\n  width: 100%;\n  max-width: 800px;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
@@ -66987,6 +67011,36 @@ if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/scheduler-tracing.development.js */ "./node_modules/scheduler/cjs/scheduler-tracing.development.js");
 }
 
+
+/***/ }),
+
+/***/ "./resources/sass/components/HomePage/_home.scss":
+/*!*******************************************************!*\
+  !*** ./resources/sass/components/HomePage/_home.scss ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_home_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!../../../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./_home.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/components/HomePage/_home.scss");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_home_scss__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_home_scss__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 

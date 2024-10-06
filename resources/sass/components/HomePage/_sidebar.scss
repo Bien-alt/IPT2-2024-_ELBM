@@ -1,0 +1,61 @@
+.sidebar {
+    width: $sidebar-width;
+    background-color: $sidebar-background-color;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .logo {
+      margin-bottom: 20px;
+      img {
+        width: 80px; // Adjust the logo size as needed
+        height: auto;
+      }
+    }
+  
+    .navbar {
+      .sidebar-menu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+  
+        .nav-item {
+          width: 100%;
+  
+          .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            color: $primary-color; // Set text color for links
+            text-decoration: none;
+            font-size: 14px; // Adjusted font size for smaller sidebar
+            @include transition(background-color, 0.3s, ease);
+            cursor: pointer; // Change cursor to pointer on hover
+  
+            &:hover {
+              background-color: $hover-color; // Set hover color
+            }
+  
+            &.active {
+              background-color: $active-color; // Highlight background for active link
+              color: white; // Change text color to white for active link
+            }
+  
+            i {
+              margin-right: 10px; // Space between icon and text
+              font-size: 18px; // Adjust icon size if needed
+            }
+  
+            .nav-text {
+              flex-grow: 1; // Allow text to take remaining space
+            }
+          }
+        }
+      }
+    }
+  }
+  
