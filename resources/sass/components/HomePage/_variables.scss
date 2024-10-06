@@ -1,5 +1,5 @@
 $primary-color: #ff9f00; // Primary color for the top bar
-$sidebar-background-color: white; // Background color for the sidebar
+$sidebar-background-color: rgb(255, 255, 255); // Background color for the sidebar
 $hover-color: lighten($primary-color, 30%); // Hover color for buttons
 $active-color: darken($primary-color, 15%); // Color for the active link
 $sidebar-width: 200px; // Adjusted width of the sidebar
