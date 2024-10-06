@@ -1,24 +1,36 @@
 .top-navbar {
-    display: flex;
-    align-items: center;
-    background-color: $primary-color; // Top bar color
-    padding: 10px 20px;
-    margin: 0; // Ensure no margin
-    width: 100%; // Ensure full width
-    position: relative; // Optional: to avoid positioning issues
-    box-shadow: none; // Optional: if you want to remove any shadows
-  
-    .toggle-button {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 24px;
-      cursor: pointer;
-      margin-right: 0px; // No margin
-      @include transition(color, 0.3s, ease);
-  
-      &:hover {
-        color: lighten($primary-color, 15%);
-      }
+  display: flex;
+  align-items: center;
+  background-color: $primary-color; // Top bar color
+  padding: 10px 20px; // Adjust as needed
+  margin: 0; // Ensure no margin
+  width: 100%; // Ensure full width
+  position: relative; // Optional: to avoid positioning issues
+  box-shadow: none; // Optional: if you want to remove any shadows
+
+  // Reset potential default spacing from child elements
+  * {
+    margin: 0; // Reset margin for all child elements
+    padding: 0; // Reset padding for all child elements
+  }
+
+  // Specifically target h2 to remove default margins
+  h2 {
+    margin: 0; // Remove default margin
+    padding: 0; // Remove default padding if any
+  }
+
+  .toggle-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 0; // No margin
+    @include transition(color, 0.3s, ease);
+
+    &:hover {
+      color: lighten($primary-color, 15%);
     }
   }
+}

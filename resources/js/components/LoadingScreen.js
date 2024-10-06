@@ -1,5 +1,5 @@
-import React from 'react';
-import logo from "../../../images/logo_1.png"; // Adjust the path as needed
+import React from "react";
+import logo from "../../images/logo_1.png"; // Adjusted path
 
 const LoadingScreen = () => (
   <div className="loading-screen">

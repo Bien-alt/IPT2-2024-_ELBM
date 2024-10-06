@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import Sidebar from "./Sidebar"; // Adjust the path if needed
-import TopNavbar from "../../../js/components/TopNavbar"; // Adjust the path if needed
-import LoadingScreen from "../../../js/components/LoadingScreen"; // Adjust the path if needed
 import "../../../sass/components/HomePage/_home.scss";
+import TopNavbar from "../TopNavBar"; 
+import Sidebar from "../Sidebar";      
+import LoadingScreen from "../LoadingScreen"; 
+
 
 // Sample data for Recent Activity
 const recentActivities = [

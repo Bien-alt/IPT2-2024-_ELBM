@@ -1,19 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { FaHome, FaUserGraduate, FaUser, FaCalendarAlt, FaSignOutAlt, FaBars } from "react-icons/fa";
-import logo from "../../../images/logo_1.png";
+import TopNavbar from "../TopNavBar"; 
+import Sidebar from "../Sidebar"; 
+import LoadingScreen from "../LoadingScreen"; 
 import "../../../sass/components/_profile.scss";
-
-const LoadingScreen = () => (
-  <div className="loading-screen">
-    <img src={logo} alt="Logo" className="loading-logo" />
-    <div className="loader">
-      <div className="dot"></div>
-      <div className="dot"></div>
-      <div className="dot"></div>
-    </div>
-  </div>
-);
 
 export default function Profile() {
   const navigate = useNavigate();
@@ -48,55 +38,11 @@ export default function Profile() {
 
   return (
     <div className="home-container">
-      {loading && <LoadingScreen />}
-      {isSidebarOpen && (
-        <div className="sidebar">
-          <img src={logo} alt="Logo" className="logo" />
-          <nav className="navbar nav-wrapper">
-            <ul className="sidebar-menu navbar-nav">
-              <li className="nav-item">
-                <a onClick={() => goToPage("/home")} className={`nav-link ${activePage === "/home" ? "active" : ""}`}>
-                  <FaHome />
-                  <span className="nav-text">HOME</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a onClick={() => goToPage("/registration")} className={`nav-link ${activePage === "/registration" ? "active" : ""}`}>
-                  <FaUserGraduate />
-                  <span className="nav-text">REGISTRATION</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a onClick={() => goToPage("/profile")} className={`nav-link ${activePage === "/profile" ? "active" : ""}`}>
-                  <FaUser />
-                  <span className="nav-text">PROFILE</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a onClick={() => goToPage("/schedule")} className={`nav-link ${activePage === "/schedule" ? "active" : ""}`}>
-                  <FaCalendarAlt />
-                  <span className="nav-text">SCHEDULE</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a onClick={handleLogout} className={`nav-link ${activePage === "/" ? "active" : ""}`}>
-                  <FaSignOutAlt />
-                  <span className="nav-text">LOGOUT</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      )}
+      {loading && <LoadingScreen />} {/* Use the imported LoadingScreen component */}
+      {isSidebarOpen && <Sidebar activePage={activePage} goToPage={goToPage} handleLogout={handleLogout} />}
       <div className="main-content">
-        <div className="top-navbar">
-          <button className="toggle-button" onClick={toggleSidebar}>
-            <FaBars />
-          </button>
-          <h2>Profile Page</h2>
-        </div>
+        <TopNavbar toggleSidebar={toggleSidebar} />
         <div className="profile-content">
-          {/* Your profile-related elements go here */}
           <h3>Profile Informations</h3>
           <table className="profile-table">
             <thead>

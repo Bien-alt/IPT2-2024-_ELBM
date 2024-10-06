@@ -1,25 +1,33 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import Navigation from "./Navs"; // Assuming Navs.js manages navigation links/buttons
+import { FaHome, FaUserGraduate, FaUser, FaCalendarAlt, FaSignOutAlt } from "react-icons/fa";
+import logo from "../../images/logo_1.png";
 
-export default function AboutUs() {
-  const navigate = useNavigate();
+const Sidebar = ({ activePage, goToPage, handleLogout }) => (
+  <div className="sidebar">
+    <img src={logo} alt="Logo" className="logo" />
+    <nav className="navbar nav-wrapper">
+      <ul className="sidebar-menu navbar-nav">
+        {[{ path: "/home", label: "HOME", icon: <FaHome /> },
+          { path: "/registration", label: "REGISTRATION", icon: <FaUserGraduate /> },
+          { path: "/profile", label: "PROFILE", icon: <FaUser /> },
+          { path: "/schedule", label: "SCHEDULE", icon: <FaCalendarAlt /> },
+        ].map(({ path, label, icon }) => (
+          <li className="nav-item" key={path}>
+            <a onClick={() => goToPage(path)} className={`nav-link ${activePage === path ? "active" : ""}`}>
+              {icon}
+              <span className="nav-text">{label}</span>
+            </a>
+          </li>
+        ))}
+        <li className="nav-item">
+          <a onClick={handleLogout} className={`nav-link ${activePage === "/" ? "active" : ""}`}>
+            <FaSignOutAlt />
+            <span className="nav-text">LOGOUT</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+);
 
-  const handleLogout = () => {
-    // Logic for logging out, such as clearing authentication data
-    navigate("/"); // Redirect to the Login page
-  };
-
-  return (
-    <div className="about-us" style={{ padding: "20px", textAlign: "center" }}>
-      <Navigation /> {/* Navigation component for navigating between pages */}
-      <h1>About Us</h1>
-      <p>We are dedicated to providing the best service possible.</p>
-      {/* Add additional information about your service or organization here */}
-
-      <div style={{ marginTop: "20px" }}>
-        <button onClick={handleLogout}>Logout</button> {/* Logout button */}
-      </div>
-    </div>
-  );
-}
+export default Sidebar;
