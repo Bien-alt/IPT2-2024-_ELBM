@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Navigation from "./Navs"; // Assuming Navs.js manages navigation links/buttons
-import "../../sass/components/_profile";
+import Navigation from "../Navs"; // Adjusted import path for Navs
+import "../../../sass/components/_profile.scss"; // Ensure this path is correct
 
 export default function ProfilePage() {
   const navigate = useNavigate();
