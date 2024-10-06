@@ -3,7 +3,10 @@
     align-items: center;
     background-color: $primary-color; // Top bar color
     padding: 10px 20px;
-    color: white;
+    margin: 0; // Ensure no margin
+    width: 100%; // Ensure full width
+    position: relative; // Optional: to avoid positioning issues
+    box-shadow: none; // Optional: if you want to remove any shadows
   
     .toggle-button {
       background: none;
@@ -11,7 +14,7 @@
       color: white;
       font-size: 24px;
       cursor: pointer;
-      margin-right: 20px;
+      margin-right: 0px; // No margin
       @include transition(color, 0.3s, ease);
   
       &:hover {
@@ -19,4 +22,3 @@
       }
     }
   }
-  
