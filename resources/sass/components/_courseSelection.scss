@@ -8,8 +8,7 @@
   flex-direction: column;
   padding: 20px;
 
-  // Ensure the sidebar and top navbar take up their expected space
-  @include flex-grow; // Example mixin, adjust according to your mixins
+ 
 
   // Add scrollbar properties
   max-height: 600px; // Set a max height to enable scrolling

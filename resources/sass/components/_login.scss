@@ -5,15 +5,12 @@
 @import '../utilities/variables'; // Adjust the path if necessary
 @import '../utilities/urls'; // Import the URL variables
 
-body.login-page { 
-  background: url($background-image) no-repeat center center; // Use the background variable
-  background-size: cover; // Ensure the background covers the body
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  margin: 0; // Remove margin
-  padding: 0;
-  height: 100vh; // Full height
-  overflow: hidden; // Prevent scrolling
+.login-page {
+  background-image: url('../../images/login_bg.png'); // Ensure the path is correct
+  background-size: cover; // This will cover the entire page
+  background-position: center; // Center the image
+  background-repeat: no-repeat; // Prevent repeating the image
+  height: 100vh; // Make sure the height covers the full viewport
 }
 
 body {

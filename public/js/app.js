@@ -16340,7 +16340,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".course-selection-container {\n  display: flex;\n  flex-direction: column;\n  padding: 20px;\n  flex-grow: 1;\n  max-height: 600px;\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n.course-selection-container .search-bar {\n  margin-bottom: 20px;\n  display: flex;\n}\n.course-selection-container .search-bar label {\n  margin-right: 10px;\n  font-weight: bold;\n}\n.course-selection-container .search-bar input {\n  padding: 10px;\n  border: 1px solid #ddd;\n  border-radius: 5px;\n  width: 100%;\n}\n.course-selection-container .student-list {\n  margin-bottom: 20px;\n}\n.course-selection-container .student-list .student-item {\n  padding: 10px;\n  border: 1px solid #ddd;\n  border-radius: 5px;\n  margin-bottom: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n.course-selection-container .student-list .student-item:hover {\n  background-color: rgb(255, 235.8, 204);\n}\n.course-selection-container .student-list .student-item.selected {\n  background-color: #ff9f00;\n  color: white;\n}\n.course-selection-container .assignment-form {\n  margin-top: 20px;\n}\n.course-selection-container .assignment-form h4 {\n  margin-bottom: 10px;\n}\n.course-selection-container .assignment-form select {\n  margin-right: 10px;\n  padding: 10px;\n  border: 1px solid #ddd;\n  border-radius: 5px;\n}\n.course-selection-container .assignment-form .subject-schedule-row {\n  display: flex;\n  align-items: center;\n  margin-bottom: 10px;\n}\n.course-selection-container .assignment-form .subject-schedule-row button {\n  margin-left: 10px;\n  background-color: #ff4d4d;\n  color: white;\n  padding: 5px 10px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n}\n.course-selection-container .assignment-form .subject-schedule-row button:hover {\n  background-color: #ff1a1a;\n}\n.course-selection-container button[type=button] {\n  background-color: #002d72;\n  color: white;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  font-size: 16px;\n  transition: background-color 0.3s ease;\n}\n.course-selection-container button[type=button]:hover {\n  background-color: rgb(0, 24.8684210526, 63);\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".course-selection-container {\n  display: flex;\n  flex-direction: column;\n  padding: 20px;\n  max-height: 600px;\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n.course-selection-container .search-bar {\n  margin-bottom: 20px;\n  display: flex;\n}\n.course-selection-container .search-bar label {\n  margin-right: 10px;\n  font-weight: bold;\n}\n.course-selection-container .search-bar input {\n  padding: 10px;\n  border: 1px solid #ddd;\n  border-radius: 5px;\n  width: 100%;\n}\n.course-selection-container .student-list {\n  margin-bottom: 20px;\n}\n.course-selection-container .student-list .student-item {\n  padding: 10px;\n  border: 1px solid #ddd;\n  border-radius: 5px;\n  margin-bottom: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n.course-selection-container .student-list .student-item:hover {\n  background-color: rgb(255, 235.8, 204);\n}\n.course-selection-container .student-list .student-item.selected {\n  background-color: #ff9f00;\n  color: white;\n}\n.course-selection-container .assignment-form {\n  margin-top: 20px;\n}\n.course-selection-container .assignment-form h4 {\n  margin-bottom: 10px;\n}\n.course-selection-container .assignment-form select {\n  margin-right: 10px;\n  padding: 10px;\n  border: 1px solid #ddd;\n  border-radius: 5px;\n}\n.course-selection-container .assignment-form .subject-schedule-row {\n  display: flex;\n  align-items: center;\n  margin-bottom: 10px;\n}\n.course-selection-container .assignment-form .subject-schedule-row button {\n  margin-left: 10px;\n  background-color: #ff4d4d;\n  color: white;\n  padding: 5px 10px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n}\n.course-selection-container .assignment-form .subject-schedule-row button:hover {\n  background-color: #ff1a1a;\n}\n.course-selection-container button[type=button] {\n  background-color: #002d72;\n  color: white;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  font-size: 16px;\n  transition: background-color 0.3s ease;\n}\n.course-selection-container button[type=button]:hover {\n  background-color: rgb(0, 24.8684210526, 63);\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -16360,12 +16360,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _images_login_bg_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../images/login_bg.png */ "./resources/images/login_bg.png");
 // Imports
+
+
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Nunito);"]);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_images_login_bg_png__WEBPACK_IMPORTED_MODULE_2__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body.login-page {\n  background: url(\"https://cdn.discordapp.com/attachments/725332328494399539/1290657332732362782/Copy_of_Blue_Modern_How_to_Draw_Anime_Youtube_Thumbnail_3.png?ex=66fd41cf&is=66fbf04f&hm=600151ceecfd854a31dfc8bbc4c2cfa736722df6bc4d4058b89a98df7d7432ce&\") no-repeat center center;\n  background-size: cover;\n  font-family: \"Arial\", sans-serif;\n  color: #333;\n  margin: 0;\n  padding: 0;\n  height: 100vh;\n  overflow: hidden;\n}\n\nbody {\n  font-family: \"Arial\", sans-serif;\n  color: #333;\n  margin: 0;\n  padding: 0;\n  height: 100vh;\n  overflow: hidden;\n}\n\n.login-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  position: relative;\n}\n\n.login-form {\n  background: #ffffff;\n  padding: 40px;\n  border-radius: 20px;\n  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);\n  width: 350px;\n  text-align: center;\n  position: relative;\n  z-index: 1;\n}\n\nh2 {\n  margin-bottom: 20px;\n  font-size: 24px;\n  color: #1a1a1a;\n}\n\n.form-group {\n  margin-bottom: 20px;\n}\n\n.input-icon {\n  display: flex;\n  align-items: center;\n  position: relative;\n  margin-bottom: 20px;\n}\n\n.input-icon input {\n  width: 100%;\n  padding: 10px 15px;\n  padding-left: 40px;\n  padding-right: 60px;\n  border: 2px solid #ffb300;\n  border-radius: 30px;\n  font-size: 16px;\n  line-height: 1.5;\n}\n\n.input-icon input::-moz-placeholder {\n  color: #aaa;\n}\n\n.input-icon input::placeholder {\n  color: #aaa;\n}\n\n.input-icon.username-icon::before {\n  content: url(\"https://img.icons8.com/ios-filled/30/cc8e00/user.png\");\n  position: absolute;\n  left: 10px;\n  top: 50%;\n  transform: translateY(-50%);\n  width: 20px;\n  height: 30px;\n}\n\n.input-icon.password-icon::before {\n  content: url(\"https://img.icons8.com/ios-filled/30/cc8e00/lock.png\");\n  position: absolute;\n  left: 10px;\n  top: 50%;\n  transform: translateY(-50%);\n  width: 20px;\n  height: 30px;\n}\n\n.eye-icon {\n  position: absolute;\n  right: 10px;\n  top: 50%;\n  transform: translateY(-50%);\n  cursor: pointer;\n  color: #cc8e00;\n  font-size: 20px;\n  z-index: 2;\n}\n\n.form-control:focus {\n  outline: none;\n  border-color: #ff9f00;\n}\n\n.btn {\n  background-color: #ffb300;\n  border: none;\n  color: white;\n  padding: 15px 20px;\n  border-radius: 30px;\n  cursor: pointer;\n  transition: background-color 0.3s;\n  font-size: 16px;\n  width: 100%;\n}\n\n.btn:hover {\n  background-color: #ff9f00;\n}\n\n.error {\n  color: red;\n  margin-bottom: 15px;\n}\n\n/* Logo styling */\n.logo {\n  width: 100px;\n  margin-bottom: 20px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n/* Modal styles */\n.modal {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.5);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 10;\n}\n\n.modal-content {\n  background: #fff;\n  padding: 20px;\n  border-radius: 10px;\n  width: 400px;\n  text-align: center;\n}\n\n.close {\n  float: right;\n  font-size: 24px;\n  cursor: pointer;\n}\n\n/* Styling for links */\n.forgot-password,\n.register-link {\n  color: #ffb300;\n  cursor: pointer;\n  text-decoration: none;\n}\n\n.forgot-password:hover,\n.register-link:hover {\n  text-decoration: underline;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".login-page {\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n  height: 100vh;\n}\n\nbody {\n  font-family: \"Arial\", sans-serif;\n  color: #333;\n  margin: 0;\n  padding: 0;\n  height: 100vh;\n  overflow: hidden;\n}\n\n.login-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  position: relative;\n}\n\n.login-form {\n  background: #ffffff;\n  padding: 40px;\n  border-radius: 20px;\n  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);\n  width: 350px;\n  text-align: center;\n  position: relative;\n  z-index: 1;\n}\n\nh2 {\n  margin-bottom: 20px;\n  font-size: 24px;\n  color: #1a1a1a;\n}\n\n.form-group {\n  margin-bottom: 20px;\n}\n\n.input-icon {\n  display: flex;\n  align-items: center;\n  position: relative;\n  margin-bottom: 20px;\n}\n\n.input-icon input {\n  width: 100%;\n  padding: 10px 15px;\n  padding-left: 40px;\n  padding-right: 60px;\n  border: 2px solid #ffb300;\n  border-radius: 30px;\n  font-size: 16px;\n  line-height: 1.5;\n}\n\n.input-icon input::-moz-placeholder {\n  color: #aaa;\n}\n\n.input-icon input::placeholder {\n  color: #aaa;\n}\n\n.input-icon.username-icon::before {\n  content: url(\"https://img.icons8.com/ios-filled/30/cc8e00/user.png\");\n  position: absolute;\n  left: 10px;\n  top: 50%;\n  transform: translateY(-50%);\n  width: 20px;\n  height: 30px;\n}\n\n.input-icon.password-icon::before {\n  content: url(\"https://img.icons8.com/ios-filled/30/cc8e00/lock.png\");\n  position: absolute;\n  left: 10px;\n  top: 50%;\n  transform: translateY(-50%);\n  width: 20px;\n  height: 30px;\n}\n\n.eye-icon {\n  position: absolute;\n  right: 10px;\n  top: 50%;\n  transform: translateY(-50%);\n  cursor: pointer;\n  color: #cc8e00;\n  font-size: 20px;\n  z-index: 2;\n}\n\n.form-control:focus {\n  outline: none;\n  border-color: #ff9f00;\n}\n\n.btn {\n  background-color: #ffb300;\n  border: none;\n  color: white;\n  padding: 15px 20px;\n  border-radius: 30px;\n  cursor: pointer;\n  transition: background-color 0.3s;\n  font-size: 16px;\n  width: 100%;\n}\n\n.btn:hover {\n  background-color: #ff9f00;\n}\n\n.error {\n  color: red;\n  margin-bottom: 15px;\n}\n\n/* Logo styling */\n.logo {\n  width: 100px;\n  margin-bottom: 20px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n/* Modal styles */\n.modal {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.5);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 10;\n}\n\n.modal-content {\n  background: #fff;\n  padding: 20px;\n  border-radius: 10px;\n  width: 400px;\n  text-align: center;\n}\n\n.close {\n  float: right;\n  font-size: 24px;\n  cursor: pointer;\n}\n\n/* Styling for links */\n.forgot-password,\n.register-link {\n  color: #ffb300;\n  cursor: pointer;\n  text-decoration: none;\n}\n\n.forgot-password:hover,\n.register-link:hover {\n  text-decoration: underline;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -16517,6 +16523,65 @@ module.exports = function (cssWithMappingToString) {
 
   return list;
 };
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    // eslint-disable-next-line no-param-reassign
+    options = {};
+  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign
+
+
+  url = url && url.__esModule ? url.default : url;
+
+  if (typeof url !== "string") {
+    return url;
+  } // If url is already wrapped in quotes, remove them
+
+
+  if (/^['"].*['"]$/.test(url)) {
+    // eslint-disable-next-line no-param-reassign
+    url = url.slice(1, -1);
+  }
+
+  if (options.hash) {
+    // eslint-disable-next-line no-param-reassign
+    url += options.hash;
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+
+
+  if (/["'() \t\n]/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+
+  return url;
+};
+
+/***/ }),
+
+/***/ "./resources/images/login_bg.png":
+/*!***************************************!*\
+  !*** ./resources/images/login_bg.png ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/login_bg.png?9f9923b84486ac241ff3886839b0ac0e");
 
 /***/ }),
 

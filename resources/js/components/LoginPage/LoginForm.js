@@ -3,7 +3,8 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import '../../../sass/components/_login.scss'; // Import the SCSS file
 import '../../../sass/utilities/_urls.scss'; // Import the URLs file
 
-const logoUrl = 'https://cdn.discordapp.com/attachments/725332328494399539/1290644340326010910/logo_1.png?ex=66fd35b5&is=66fbe435&hm=58a50ad98cb5874b4688b24469ff66749587c4e5fbb6fc492367c72f92c519e4&'; // Logo URL
+// Update the logoUrl to point to the local image path
+const logoUrl = require('../../../images/login_bg.png'); // Adjust the path if needed
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
