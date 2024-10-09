@@ -1,10 +1,13 @@
 @mixin transition($property, $duration, $timing) {
-    transition: $property $duration $timing;
-  }
-  
-  @mixin center-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+  transition: $property $duration $timing;
+}
+
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-grow {
+  flex-grow: 1; // Adjust the value as necessary
+}

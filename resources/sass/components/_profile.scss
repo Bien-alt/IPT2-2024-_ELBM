@@ -30,3 +30,30 @@
     color: white;
   }
 }
+
+/* Styling for the button group */
+.button-group {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+
+  button {
+    background-color: #002d72; /* Dark blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken(#002d72, 10%); /* Darker on hover */
+    }
+
+    &.active {
+      background-color: #ff9f00; /* Highlight active button with your chosen color */
+      color: white;
+    }
+  }
+}

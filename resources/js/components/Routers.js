@@ -7,6 +7,7 @@ import Registration from "./RegistrationPage/Registration"; // Registration comp
 import Profile from "./ProfilePage/Profile"; // Profile component
 import Schedule from "./SchedulePage/Schedule"; // Schedule component
 import Login from "./LoginPage/Login"; // Login component
+import CourseSelection from "./SchedulePage/CourseSelection"; // Import CourseSelection component
 
 export default function Routers() {
   return (
@@ -17,6 +18,7 @@ export default function Routers() {
         <Route path="registration" element={<Registration />} /> {/* Registration page */}
         <Route path="profile" element={<Profile />} /> {/* Profile page */}
         <Route path="schedule" element={<Schedule />} /> {/* Schedule page */}
+        <Route path="course-selection" element={<CourseSelection />} /> {/* Course selection page */}
       </Routes>
     </Router>
   );

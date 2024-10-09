@@ -62,6 +62,10 @@ export default function Schedule() {
     });
   };
 
+  const goToCourseSelection = () => {
+    navigate("/course-selection");
+  };
+
   return (
     <div className="home-container">
       {loading && <LoadingScreen />}
@@ -124,10 +128,19 @@ export default function Schedule() {
             </div>
 
             <div className="form-actions">
+              {/* Buttons aligned beside each other */}
               <button type="submit">Add Schedule</button>
+              <button
+                type="button"
+                onClick={goToCourseSelection}
+                className="assign-schedule-btn"
+              >
+                Assign Student a Schedule
+              </button>
             </div>
           </form>
 
+          {/* Current Schedule Table */}
           <h3>Current Schedule</h3>
           <table className="schedule-table">
             <thead>
@@ -150,7 +163,7 @@ export default function Schedule() {
                 ))
               ) : (
                 <tr>
-                  <td colSpan="4" style={{ textAlign: 'center' }}>No schedule available</td>
+                  <td colSpan="4" style={{ textAlign: "center" }}>No schedule available</td>
                 </tr>
               )}
             </tbody>
