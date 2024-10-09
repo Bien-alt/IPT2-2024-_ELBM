@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "../../../sass/components/_register.scss"; // Adjust path as needed
-import Sidebar from "../Sidebar"; // Assuming the Sidebar component path
-import TopNavbar from "../TopNavBar"; // Assuming the TopNavbar component path
-import LoadingScreen from "../LoadingScreen"; // Assuming the LoadingScreen component path
+import "../../../sass/components/_register.scss"; 
+import Sidebar from "../Sidebar"; 
+import TopNavbar from "../TopNavBar"; 
+import LoadingScreen from "../LoadingScreen"; 
 import { useNavigate } from "react-router-dom";
 
 const RegistrationPage = () => {
@@ -22,7 +22,7 @@ const RegistrationPage = () => {
     emergencyLastName: "",
     emergencyRelationship: "",
     emergencyContactNumber: "",
-    role: "", // Added role here
+    role: "", 
   });
 
   const [loading, setLoading] = useState(false); // State for loading screen

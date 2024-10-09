@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import "../../../sass/components/_courseSelection.scss";
 
 export default function CourseSelection() {
-  const [students, setStudents] = useState([]); // List of students
-  const [searchQuery, setSearchQuery] = useState(""); // Search query
-  const [filteredStudents, setFilteredStudents] = useState([]); // Filtered student list based on search query
-  const [selectedStudent, setSelectedStudent] = useState(null); // Selected student
-  const [courses, setCourses] = useState([]); // List of available courses
-  const [selectedCourse, setSelectedCourse] = useState(""); // Selected course
-  const [availableSubjects, setAvailableSubjects] = useState([]); // Subjects for selected course
-  const [selectedSubjects, setSelectedSubjects] = useState([]); // Selected subjects and their available schedule
-  const [loading, setLoading] = useState(false); // Loading state
+  const [students, setStudents] = useState([]); 
+  const [searchQuery, setSearchQuery] = useState(""); 
+  const [filteredStudents, setFilteredStudents] = useState([]); 
+  const [selectedStudent, setSelectedStudent] = useState(null); 
+  const [courses, setCourses] = useState([]); 
+  const [selectedCourse, setSelectedCourse] = useState(""); 
+  const [availableSubjects, setAvailableSubjects] = useState([]); 
+  const [selectedSubjects, setSelectedSubjects] = useState([]); 
+  const [loading, setLoading] = useState(false); 
 
   // Mock student data (replace with actual data fetch)
   useEffect(() => {

@@ -8370,8 +8370,8 @@ function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" !=
 function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
- // Import the SCSS file
- // Adjust the path to the image
+
+
 
 var LoginForm = function LoginForm() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
@@ -8390,8 +8390,6 @@ var LoginForm = function LoginForm() {
     _useState8 = _slicedToArray(_useState7, 2),
     showPassword = _useState8[0],
     setShowPassword = _useState8[1];
-
-  // Add the 'login-page' class to the body to apply the background only to this page
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     document.body.classList.add('login-page');
 
@@ -8410,7 +8408,6 @@ var LoginForm = function LoginForm() {
         username: username,
         password: password
       });
-      // Implement navigation logic here if needed
     }
   };
   var toggleShowPassword = function toggleShowPassword() {
@@ -8713,10 +8710,10 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
- // Adjust path as needed
- // Assuming the Sidebar component path
- // Assuming the TopNavbar component path
- // Assuming the LoadingScreen component path
+
+
+
+
 
 
 var RegistrationPage = function RegistrationPage() {
@@ -8736,7 +8733,7 @@ var RegistrationPage = function RegistrationPage() {
       emergencyLastName: "",
       emergencyRelationship: "",
       emergencyContactNumber: "",
-      role: "" // Added role here
+      role: ""
     }),
     _useState2 = _slicedToArray(_useState, 2),
     formData = _useState2[0],
@@ -9101,12 +9098,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // Home component
- // Registration component
- // Profile component
- // Schedule component
- // Login component
- // Import CourseSelection component
+
+
+
+
+
+
 
 function Routers() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.BrowserRouter, {
@@ -9174,39 +9171,39 @@ function CourseSelection() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
     _useState2 = _slicedToArray(_useState, 2),
     students = _useState2[0],
-    setStudents = _useState2[1]; // List of students
+    setStudents = _useState2[1];
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
     _useState4 = _slicedToArray(_useState3, 2),
     searchQuery = _useState4[0],
-    setSearchQuery = _useState4[1]; // Search query
+    setSearchQuery = _useState4[1];
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
     _useState6 = _slicedToArray(_useState5, 2),
     filteredStudents = _useState6[0],
-    setFilteredStudents = _useState6[1]; // Filtered student list based on search query
+    setFilteredStudents = _useState6[1];
   var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
     _useState8 = _slicedToArray(_useState7, 2),
     selectedStudent = _useState8[0],
-    setSelectedStudent = _useState8[1]; // Selected student
+    setSelectedStudent = _useState8[1];
   var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
     _useState10 = _slicedToArray(_useState9, 2),
     courses = _useState10[0],
-    setCourses = _useState10[1]; // List of available courses
+    setCourses = _useState10[1];
   var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
     _useState12 = _slicedToArray(_useState11, 2),
     selectedCourse = _useState12[0],
-    setSelectedCourse = _useState12[1]; // Selected course
+    setSelectedCourse = _useState12[1];
   var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
     _useState14 = _slicedToArray(_useState13, 2),
     availableSubjects = _useState14[0],
-    setAvailableSubjects = _useState14[1]; // Subjects for selected course
+    setAvailableSubjects = _useState14[1];
   var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
     _useState16 = _slicedToArray(_useState15, 2),
     selectedSubjects = _useState16[0],
-    setSelectedSubjects = _useState16[1]; // Selected subjects and their available schedule
+    setSelectedSubjects = _useState16[1];
   var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
     _useState18 = _slicedToArray(_useState17, 2),
     loading = _useState18[0],
-    setLoading = _useState18[1]; // Loading state
+    setLoading = _useState18[1];
 
   // Mock student data (replace with actual data fetch)
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
@@ -16340,7 +16337,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".course-selection-container {\n  display: flex;\n  flex-direction: column;\n  padding: 20px;\n  max-height: 600px;\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n.course-selection-container .search-bar {\n  margin-bottom: 20px;\n  display: flex;\n}\n.course-selection-container .search-bar label {\n  margin-right: 10px;\n  font-weight: bold;\n}\n.course-selection-container .search-bar input {\n  padding: 10px;\n  border: 1px solid #ddd;\n  border-radius: 5px;\n  width: 100%;\n}\n.course-selection-container .student-list {\n  margin-bottom: 20px;\n}\n.course-selection-container .student-list .student-item {\n  padding: 10px;\n  border: 1px solid #ddd;\n  border-radius: 5px;\n  margin-bottom: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n.course-selection-container .student-list .student-item:hover {\n  background-color: rgb(255, 235.8, 204);\n}\n.course-selection-container .student-list .student-item.selected {\n  background-color: #ff9f00;\n  color: white;\n}\n.course-selection-container .assignment-form {\n  margin-top: 20px;\n}\n.course-selection-container .assignment-form h4 {\n  margin-bottom: 10px;\n}\n.course-selection-container .assignment-form select {\n  margin-right: 10px;\n  padding: 10px;\n  border: 1px solid #ddd;\n  border-radius: 5px;\n}\n.course-selection-container .assignment-form .subject-schedule-row {\n  display: flex;\n  align-items: center;\n  margin-bottom: 10px;\n}\n.course-selection-container .assignment-form .subject-schedule-row button {\n  margin-left: 10px;\n  background-color: #ff4d4d;\n  color: white;\n  padding: 5px 10px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n}\n.course-selection-container .assignment-form .subject-schedule-row button:hover {\n  background-color: #ff1a1a;\n}\n.course-selection-container button[type=button] {\n  background-color: #002d72;\n  color: white;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  font-size: 16px;\n  transition: background-color 0.3s ease;\n}\n.course-selection-container button[type=button]:hover {\n  background-color: rgb(0, 24.8684210526, 63);\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".course-selection-container {\n  display: flex;\n  flex-direction: column;\n  padding: 20px;\n  flex-grow: 1;\n  max-height: 600px;\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n.course-selection-container .search-bar {\n  margin-bottom: 20px;\n  display: flex;\n}\n.course-selection-container .search-bar label {\n  margin-right: 10px;\n  font-weight: bold;\n}\n.course-selection-container .search-bar input {\n  padding: 10px;\n  border: 1px solid #ddd;\n  border-radius: 5px;\n  width: 100%;\n}\n.course-selection-container .student-list {\n  margin-bottom: 20px;\n}\n.course-selection-container .student-list .student-item {\n  padding: 10px;\n  border: 1px solid #ddd;\n  border-radius: 5px;\n  margin-bottom: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n.course-selection-container .student-list .student-item:hover {\n  background-color: rgb(255, 235.8, 204);\n}\n.course-selection-container .student-list .student-item.selected {\n  background-color: #ff9f00;\n  color: white;\n}\n.course-selection-container .assignment-form {\n  margin-top: 20px;\n}\n.course-selection-container .assignment-form h4 {\n  margin-bottom: 10px;\n}\n.course-selection-container .assignment-form select {\n  margin-right: 10px;\n  padding: 10px;\n  border: 1px solid #ddd;\n  border-radius: 5px;\n}\n.course-selection-container .assignment-form .subject-schedule-row {\n  display: flex;\n  align-items: center;\n  margin-bottom: 10px;\n}\n.course-selection-container .assignment-form .subject-schedule-row button {\n  margin-left: 10px;\n  background-color: #ff4d4d;\n  color: white;\n  padding: 5px 10px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n}\n.course-selection-container .assignment-form .subject-schedule-row button:hover {\n  background-color: #ff1a1a;\n}\n.course-selection-container button[type=button] {\n  background-color: #002d72;\n  color: white;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  font-size: 16px;\n  transition: background-color 0.3s ease;\n}\n.course-selection-container button[type=button]:hover {\n  background-color: rgb(0, 24.8684210526, 63);\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

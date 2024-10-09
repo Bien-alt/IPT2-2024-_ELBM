@@ -9,13 +9,18 @@ export default function Navs() {
           <Link to="/home">Home</Link> {/* Navigate to Home page */}
         </li>
         <li>
-          <Link to="/about-us">About Us</Link> {/* Navigate to About Us page */}
+          <Link to="/registration">Registration</Link> {/* Navigate to Registration page */}
         </li>
         <li>
-          <Link to="/contact-us">Contact Us</Link> {/* Navigate to Contact Us page */}
+          <Link to="/profile">Profile</Link> {/* Navigate to Profile page */}
+        </li>
+        <li>
+          <Link to="/schedule">Schedule</Link> {/* Navigate to Schedule page */}
+        </li>
+        <li>
+          <Link to="/course-selection">Course Selection</Link> {/* Navigate to Course Selection page */}
         </li>
       </ul>
     </nav>
   );
 }
-

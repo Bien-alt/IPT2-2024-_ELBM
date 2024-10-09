@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from "./HomePage/Home"; // Home component
-import Registration from "./RegistrationPage/Registration"; // Registration component
-import Profile from "./ProfilePage/Profile"; // Profile component
-import Schedule from "./SchedulePage/Schedule"; // Schedule component
-import Login from "./LoginPage/Login"; // Login component
-import CourseSelection from "./SchedulePage/CourseSelection"; // Import CourseSelection component
+import Home from "./HomePage/Home"; 
+import Registration from "./RegistrationPage/Registration"; 
+import Profile from "./ProfilePage/Profile"; 
+import Schedule from "./SchedulePage/Schedule"; 
+import Login from "./LoginPage/Login"; 
+import CourseSelection from "./SchedulePage/CourseSelection"; 
 
 export default function Routers() {
   return (

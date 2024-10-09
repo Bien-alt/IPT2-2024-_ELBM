@@ -1,14 +1,15 @@
-@import '../components/HomePage/_variables.scss'; // Adjust the path if needed
-@import '../components/HomePage/_mixins.scss'; // Adjust the path if needed
-// @import '../components/HomePage/_topNavbar.scss'; // Adjust the path if needed
-// @import '../components/HomePage/_sidebar.scss'; // Adjust the path if needed
+@import '../components/HomePage/_variables.scss'; 
+@import '../components/HomePage/_mixins.scss'; 
+// @import '../components/HomePage/_topNavbar.scss'; 
+// @import '../components/HomePage/_sidebar.scss'; 
 
 .course-selection-container {
   display: flex;
   flex-direction: column;
   padding: 20px;
 
- 
+  
+  @include flex-grow; 
 
   // Add scrollbar properties
   max-height: 600px; // Set a max height to enable scrolling

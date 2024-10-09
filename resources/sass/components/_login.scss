@@ -1,9 +1,9 @@
-// _login.scss
 
-// Fonts
+
+
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-@import '../utilities/variables'; // Adjust the path if necessary
-@import '../utilities/urls'; // Import the URL variables
+@import '../utilities/variables'; 
+@import '../utilities/urls'; 
 
 .login-page {
   background-image: url('../../images/login_bg.png'); // Ensure the path is correct

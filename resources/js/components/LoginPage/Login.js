@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import '../../../sass/components/_login.scss'; // Import the SCSS file
-import logo from '../../../images/logo_1.png'; // Adjust the path to the image
-
+import '../../../sass/components/_login.scss'; 
+import logo from '../../../images/logo_1.png'; 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
 
-  // Add the 'login-page' class to the body to apply the background only to this page
+  
   useEffect(() => {
     document.body.classList.add('login-page');
 
@@ -26,7 +25,7 @@ const LoginForm = () => {
     } else {
       setError('');
       console.log('Admin logged in:', { username, password });
-      // Implement navigation logic here if needed
+      
     }
   };
 

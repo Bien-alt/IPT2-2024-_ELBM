@@ -9,7 +9,7 @@
     .logo {
       margin-bottom: 20px;
       img {
-        width: 80px; // Adjust the logo size as needed
+        width: 80px; 
         height: auto;
       }
     }
@@ -30,19 +30,19 @@
             display: flex;
             align-items: center;
             padding: 15px;
-            color: $primary-color; // Set text color for links
+            color: $primary-color; 
             text-decoration: none;
-            font-size: 14px; // Adjusted font size for smaller sidebar
+            font-size: 14px; 
             @include transition(background-color, 0.3s, ease);
-            cursor: pointer; // Change cursor to pointer on hover
+            cursor: pointer; 
   
             &:hover {
-              background-color: $hover-color; // Set hover color
+              background-color: $hover-color; 
             }
   
             &.active {
-              background-color: $active-color; // Highlight background for active link
-              color: white; // Change text color to white for active link
+              background-color: $active-color; 
+              color: white; 
             }
   
             i {
